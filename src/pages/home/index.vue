@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      msg: 'home'
+      msg: '首页home'
     }
   }
 }

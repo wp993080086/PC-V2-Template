@@ -7,5 +7,14 @@ export default [
       title: '首页',
       showHeader: true
     }
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: () => import(/* webpackChunkName: 'demo' */ '@/pages/demo'),
+    meta: {
+      title: 'demo',
+      showHeader: true
+    }
   }
 ]
