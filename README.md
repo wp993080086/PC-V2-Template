@@ -1,93 +1,71 @@
-# ⚡️ 1，项目描述
-
 <div align=center>
   
-![WebPack](https://img.shields.io/badge/4.46.0-WebPack-orange)
-![TypeScript](https://img.shields.io/badge/4.1.5-TypeScript-lightgrey)
-![Vue](https://img.shields.io/badge/3.2.6-Vue-brightgreen)
-![Axios](https://img.shields.io/badge/0.21.3-Axios-ff69b4)
+![webPack](https://img.shields.io/badge/5.54.0-webPack-orange)
+![Vue](https://img.shields.io/badge/2.6.14-Vue-brightgreen)
+![Axios](https://img.shields.io/badge/0.27.2-Axios-ff69b4)
+![Vue-Router](https://img.shields.io/badge/3.5.4-Vue%20Router-blueviolet)
+  
+</div>
+<div align=center>
+  
+![Vuex](https://img.shields.io/badge/3.6.2-Vuex-yellow)
+![Element-ui](https://img.shields.io/badge/2.15.9-Element--ui-409EFF)
+![Nprogress](https://img.shields.io/badge/0.2.0-Nprogress-red)
+![Sass](https://img.shields.io/badge/1.53.0-Sass-orange)
   
 </div>
 
-<div align=center>
+# ⚡️ 简介
 
-![Vue-Router](https://img.shields.io/badge/4.0.11-Vue%20Router-blueviolet)
-![VueX](https://img.shields.io/badge/4.0.2-Pinia-yellow)
-![Element-Plus](https://img.shields.io/badge/1.2.0-beta.6-Element--Plus-409EFF)
-![Sass](https://img.shields.io/badge/1.26.5-Sass-orange)
+一个开箱即用的 `webpack 5` + `Vue 3` + `Element ui` + `Vuex` + `Vue-Router 3` 的PC端项目模板，搭配有 `eslint` 代码检查修复，`git` 推送检查钩子 `Husky`。
 
-</div>
+# 🚀 开发
 
-# 🚀 2，项目运行
-
-- nodejs：14.16+
-- 浏览器：Chrome 或 Edge
-- 编辑器：Vs Code
-## 2.1，安装
+1. 安装
 
 ```
 npm install
 ```
 
-## 2.2，运行
-
-- 启动配置为.env.development
+2. 运行
 
 ```
 npm run serve
 ```
 
-## 2.3，打包
+# 📦️ 多环境打包
 
-- 开发环境打包 配置为.env.dev
-
-```
-npm run dev_build
-```
-
-- 测试环境打包 配置为.env.test
+- 测试环境打包
 
 ```
-npm run test_build
+npm run build_test
 ```
 
-- beta环境打包 配置为.env.beta
-
-```
-npm run beta_build
-```
-
-- 正式环境打包 配置为.env.production
+- 生产环境打包
 
 ```
 npm run build
 ```
 
-## 2.4，自动修复
+# 🔧 代码修复
+
+- 自动修复
 
 ```
 npm run lint-fix
 ```
 
-# 📦️ 3，目录说明
+# 📚 目录
 
 ```
 ├─ .env.xxx // 各环境的配置文件
-├─ deploy // docker配置
-├─ Dockerfile // docker配置
 ├─ .eslintrc.js // eslint配置
 ├─ vue.config.js // vue配置
-├─ tsconfig.json // ts配置
 └─ src
   │─ App.vue // 根容器
-  │─ main.ts
-  │─ shims-vue.d.ts
+  │─ main.js
   │  
   ├─ components // 组件
-  │          
-  ├─ config // 项目级配置
-  │    │
-  │    └─index.ts
   │      
   ├─ pages // 页面
   │                          
@@ -101,25 +79,11 @@ npm run lint-fix
   ├─ static // 静态资源
   │              
   ├─ store // vuex
-  │              
-  ├─ themes // 主题及公共样式
-  │      
-  ├─ types // ts类型定义
   │      
   └─ utils // 工具库
-  │ │  index.ts
-  │ │  loading.ts // loading封装
-  │ │  toast.ts // 弹窗封装  
-  │ └─md5
+  │ │  index.js
+  │ │  loading.js // loading封装
+  │ │  toast.js // 弹窗封装  
+  │ └─
   │......
 ```
-
-# 🔧 4，README更新说明
-
-**如有以下变动，需要更新README**
-
-- package.json文件的scripts命令更新
-- 重要目录增删
-- 运行环境变更
-- 项目地址变更
-- 项目背景变更
