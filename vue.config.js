@@ -51,7 +51,7 @@ module.exports = {
     types.forEach(type => addStyleResource(config.module.rule('scss').oneOf(type)))
     // 配置，将当前页定义的cdn值传到主页面（index.html）
     config.plugin('html').tap(args => {
-    // 这里我是除本地环境，其余均使用CDN，可自己选择是否配置
+    // 除本地环境，其余均使用CDN
       args[0].cdn = process.env.VUE_APP_STAGE === 'development' ? {} : CDN
       return args
     })
