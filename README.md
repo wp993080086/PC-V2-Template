@@ -1,3 +1,5 @@
+# 一个开箱即用的PC端项目模板。
+
 <div align=center>
   
 ![webpack](https://img.shields.io/badge/5.54.0-webpack-orange)
@@ -6,6 +8,7 @@
 ![vue-router](https://img.shields.io/badge/3.5.4-vue%20router-blueviolet)
   
 </div>
+
 <div align=center>
   
 ![vuex](https://img.shields.io/badge/3.6.2-vuex-yellow)
@@ -15,11 +18,7 @@
   
 </div>
 
-# ⚡️ 简介
-
-一个开箱即用的 `webpack 5` + `Vue 3` + `Element ui` + `Vuex` + `Vue-Router 3` 的PC端项目模板，搭配有 `eslint` 代码检查修复，`git` 推送检查钩子 `Husky`。
-
-# 🚀 开发
+## 🚀 开发
 
 1. 安装
 
@@ -33,7 +32,7 @@ npm install
 npm run serve
 ```
 
-# 📦️ 多环境打包
+## 📦️ 多环境打包
 
 - 测试环境打包
 
@@ -55,7 +54,7 @@ npm run build
 npm run lint-fix
 ```
 
-# 📚 目录
+## 📚 目录
 
 ```
 ├─ .env.xxx // 各环境的配置文件
