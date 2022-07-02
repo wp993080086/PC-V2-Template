@@ -18,7 +18,7 @@
 
 # ⚡️ 简介
 
-一个开箱即用，基于 `webpack 5` + `vue 2` + `typeScript` + `element-ui` + `vuex` + `vue-router 3` + `axios` 的PC端项目模板。
+一个开箱即用，基于 `webpack 5` + `vue 2` + `element-ui` + `vuex` + `vue-router 3` + `axios` 的PC端项目模板。
 
 
 # 🚀 开发
