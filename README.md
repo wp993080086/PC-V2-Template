@@ -1,20 +1,20 @@
 # 一个开箱即用的PC端项目模板。
 
 <div align=center>
-  
+
 ![webpack](https://img.shields.io/badge/5.54.0-webpack-orange)
-![vue](https://img.shields.io/badge/2.6.14-vue-brightgreen)
-![axios](https://img.shields.io/badge/0.27.2-axios-ff69b4)
-![vue-router](https://img.shields.io/badge/3.5.4-vue%20router-blueviolet)
+![nprogress](https://img.shields.io/badge/0.2.0-nprogress-red)
+![sass](https://img.shields.io/badge/1.53.0-sass-orange)
   
 </div>
 
 <div align=center>
   
-![vuex](https://img.shields.io/badge/3.6.2-vuex-yellow)
 ![element-ui](https://img.shields.io/badge/2.15.9-element--ui-409EFF)
-![nprogress](https://img.shields.io/badge/0.2.0-nprogress-red)
-![sass](https://img.shields.io/badge/1.53.0-sass-orange)
+![vue](https://img.shields.io/badge/2.6.14-vue-brightgreen)
+![axios](https://img.shields.io/badge/0.27.2-axios-ff69b4)
+![vue-router](https://img.shields.io/badge/3.5.4-vue%20router-blueviolet)
+![vuex](https://img.shields.io/badge/3.6.2-vuex-yellow)
   
 </div>
 
