@@ -1,5 +1,3 @@
-# 一个开箱即用的PC端项目模板。
-
 <div align=center>
 
 ![webpack](https://img.shields.io/badge/5.54.0-webpack-orange)
@@ -18,7 +16,12 @@
   
 </div>
 
-## 🚀 开发
+# ⚡️ 简介
+
+一个开箱即用，基于 `webpack 5` + `vue 2` + `typeScript` + `element-ui` + `vuex` + `vue-router 3` + `axios` 的PC端项目模板。
+
+
+# 🚀 开发
 
 1. 安装
 
@@ -32,7 +35,7 @@ npm install
 npm run serve
 ```
 
-## 📦️ 多环境打包
+# 📦️ 多环境打包
 
 - 测试环境打包
 
@@ -54,7 +57,7 @@ npm run build
 npm run lint-fix
 ```
 
-## 📚 目录
+# 📚 目录
 
 ```
 ├─ .env.xxx // 各环境的配置文件
