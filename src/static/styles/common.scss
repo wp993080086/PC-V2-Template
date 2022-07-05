@@ -5,7 +5,7 @@ $blue:#409eff;
 $gray:#cccccc;
 
 // 水平垂直居中
-@mixin flex_c {
+@mixin flex_center {
   display: flex;
   align-items: center;
   justify-content: center;
