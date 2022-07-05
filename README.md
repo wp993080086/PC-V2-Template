@@ -51,8 +51,6 @@ npm run build
 
 # 🔧 代码修复
 
-- 自动修复
-
 ```
 npm run lint-fix
 ```

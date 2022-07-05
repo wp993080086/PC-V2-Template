@@ -81,7 +81,7 @@ instance.interceptors.response.use(
           toast('接口不存在', 1)
           break
         default:
-          toast(errorResponse.data.message || '502 数据请求失败啦 ~', 1)
+          toast(errorResponse.data.message || '数据请求失败啦 ~', 1)
       }
       return Promise.reject(errorResponse)
     } catch (e) {

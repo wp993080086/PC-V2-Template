@@ -10,12 +10,14 @@ $gray:#cccccc;
   align-items: center;
   justify-content: center;
 }
+
 // 单行文本省略号
 @mixin omit {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 // 多行文本省略号
 @mixin omit_more {
   display: -webkit-box;
@@ -26,6 +28,7 @@ $gray:#cccccc;
   -webkit-line-clamp: 2;
 }
 
+// 悬浮颜色变淡
 @mixin cursor_hand {
   cursor: pointer;
   &:hover {
@@ -33,6 +36,7 @@ $gray:#cccccc;
   }
 }
 
+// 悬浮阴影效果
 @mixin box_shadow($time : 0.5, $color: #cccccc) {
   transition: ease $time + s;
   &:hover {

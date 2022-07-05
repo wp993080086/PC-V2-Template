@@ -7,11 +7,7 @@ module.exports = {
     es6: true,
     amd: true,
   },
-  globals: {
-    getApp: true,
-    uni: true,
-    __wxConfig: true
-  },
+  globals: {},
   extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
   parserOptions: {
     ecmaVersion: 2020,

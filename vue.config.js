@@ -2,6 +2,7 @@ const baseURL = process.env.VUE_APP_URL
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const path = require('path')
+
 const resolve = (dir) => path.join(__dirname, '.', dir)
 const productionGzipExtensions = ['js', 'css']
 
@@ -15,8 +16,16 @@ function addStyleResource(rule) {
       ]
     })
 }
-
-const CDN = {
+// 开发的cdn
+const devCdn = {
+  css: [
+    'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.9/theme-chalk/index.min.css',
+    'https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css'
+  ],
+  js: ''
+}
+// 打包的cdn
+const proCdn = {
   css: [
     'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.9/theme-chalk/index.min.css',
     'https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css'
@@ -29,20 +38,20 @@ const CDN = {
     'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.9/index.min.js',
     'https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js'
   ]
-};
-
+}
+// 打包忽略
 const objExternals = {
   vue: 'Vue',
   axios: 'axios',
   vuex: 'Vuex',
   'vue-router': 'VueRouter',
   'element-ui': 'ELEMENT',
-  'nprogress': 'NProgress'
+  nprogress: 'NProgress'
 }
 
 module.exports = {
   publicPath: './',
-  outputDir: process.env.VUE_APP_BASE_OUTPUTDIR,
+  outputDir: 'dist',
   assetsDir: 'assets',
   lintOnSave: true,
   productionSourceMap: false, // 不需要生产环境的 source map
@@ -52,7 +61,7 @@ module.exports = {
     // 配置，将当前页定义的cdn值传到主页面（index.html）
     config.plugin('html').tap(args => {
     // 除本地环境，其余均使用CDN
-      args[0].cdn = process.env.VUE_APP_STAGE === 'development' ? {} : CDN
+      args[0].cdn = process.env.VUE_APP_STAGE === 'development' ? devCdn : proCdn
       return args
     })
   },
@@ -60,13 +69,13 @@ module.exports = {
     devServer: {
       open: false,
       host: 'localhost',
-      port: '8600',
+      port: '8800',
       hot: true,
       proxy: {
         '/api': {
           target: baseURL,
           secure: false,
-          changeOrigin: true, // 开启代理
+          changeOrigin: true, // 是否允许跨域
           pathRewrite: {
             '^/api': '/'
           }
@@ -94,8 +103,8 @@ module.exports = {
       }),
       // build时生成打包报告
       new BundleAnalyzer({
-        analyzerMode: 'disabled', // 启用 server 不启用 disabled
-        openAnalyzer: false, // 是否自动打开报告页面
+        analyzerMode: 'disabled', // 启用:server 不启用:disabled
+        openAnalyzer: true, // 是否自动打开报告页面
         analyzerPort: 9999 // 报告页面端口
       })
     ]
